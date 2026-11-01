@@ -28,3 +28,28 @@ functions:
           method: post
           cors: true
           integration: lambda
+
+  crear_bucket:
+    handler: crear_bucket.lambda_handler
+    events:
+      - http:
+          path: /s3/bucket/crear
+          method: post
+          cors: true
+          integration: lambda
+  crear_directorio:
+    handler: crear_directorio.lambda_handler
+    events:
+      - http:
+          path: /s3/directorio/crear
+          method: post
+          cors: true
+          integration: lambda
+  subir_archivo:
+    handler: subir_archivo.lambda_handler
+    events:
+      - http:
+          path: /s3/archivo/subir
+          method: post
+          cors: true
+          integration: lambda
